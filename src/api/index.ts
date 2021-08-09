@@ -1,0 +1,6 @@
+export * from "./CreateStudent"
+export * from "./GetImage"
+export * from "./ListStudents"
+export * from "./GetCep"
+export * from "./UpdateStudent"
+export * from "./DeleteStudent"
