@@ -123,7 +123,7 @@ export function StudentPage() {
           </Text>
           <br />
         </Box>
-        <Box bg="#fff" w="50%" p={6} color="white">
+        <Box bg="#fff" w={{ base: "100%", md: "50%" }} p={6} color="white">
           <FormStudent
             name={name}
             setName={setName}
@@ -134,24 +134,24 @@ export function StudentPage() {
         </Box>
         <Button
           size="lg"
-          width={{ base: "100%", sm: "50%", md: "10%" }}
+          width={{ base: "50%", sm: "50%", md: "10%" }}
           onClick={() => sendStudent()}
         >
           Cadastrar
         </Button>
       </Stack>
-      <Stack spacing="10px" margin="10%">
+      <Stack spacing="10px" margin={{ base: "3%", md: "10%" }}>
         {data.map(e => (
           <Flex key={e.id_student}>
-            <Box boxSize="150px">
+            <Box boxSize={{ base: "100px", md: "150px" }}>
               <Image
                 borderRadius="full"
-                boxSize="150px"
+                boxSize={{ base: "70px", md: "150px" }}
                 src={e.imageProp}
                 alt="Segun Adebayo"
               />
             </Box>
-            <Box padding="10px">
+            <Box fontSize={{ base: "50%", md: "90%" }} padding="10px">
               <Text>Nome: {e.name}</Text>
               <Text>
                 Endereço: {e.street}, n° {e.number}
@@ -161,11 +161,17 @@ export function StudentPage() {
               <Text>CEP: {e.zipcode}</Text>
             </Box>
             <Spacer />
-            <Box padding="30px">
-              <Button size="xs" margin="5px" onClick={() => openModal(e)}>
+            <Box padding={{ base: "10px", md: "20px" }}>
+              <Button
+                width={{ base: "60%", md: "40%" }}
+                size="xs"
+                margin="5px"
+                onClick={() => openModal(e)}
+              >
                 Editar
               </Button>
               <Button
+                width={{ base: "60%", md: "40%" }}
                 size="xs"
                 bg="red.400"
                 margin="5px"
