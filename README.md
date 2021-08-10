@@ -30,6 +30,9 @@ Para rodar localmente:
   yarn start
 ```
 
+### Serviço hospedado no heroku
+  https://cadastro-alunos-delta.herokuapp.com/
+
 ### Rotas
 
 #### /home
