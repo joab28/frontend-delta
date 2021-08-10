@@ -58,7 +58,7 @@ export function FormStudent(props: propsType) {
         setFile(event.target.files)
       } else {
         alertToast("Apenas arquivo de imagem JPG", "error")
-        setFile("")
+        setFile({})
         event.target.value = ""
       }
     }

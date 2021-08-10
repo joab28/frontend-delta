@@ -69,7 +69,7 @@ export function StudentPage() {
   function clearInputs() {
     setObjCep({ cep: "", cidade: "", bairro: "", rua: "", numCasa: "" })
     setName("")
-    setFile("")
+    setFile({})
   }
   async function sendStudent() {
     if (checksInputs({ name, ...objCep }, file)) {
@@ -89,6 +89,7 @@ export function StudentPage() {
         resp.aluno.imageProp = imageProp
         dataSet([resp.aluno, ...data])
         clearInputs()
+
         alertToast("Cadastro realizado com sucesso!", "success")
       } else {
         alertToast(resp.aluno, "error")
